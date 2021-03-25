@@ -14,7 +14,8 @@ app.use(cors());
 app.use(express.json());
 
 //Database Connection
-const uri = process.env.ATLAS_URI;
+const uri = process.env.ATLAS_URI;      //Database Live Connection
+//const uri = process.env.LOCAL_URI;      //Database Local COnnection
 mongoose.connect(uri, {useNewUrlParser:true, useCreateIndex:true, useUnifiedTopology:true});
 
 const connection = mongoose.connection;
