@@ -8,7 +8,7 @@ const post_router = require('./routes/post');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -25,6 +25,6 @@ connection.once('open', ()=> {
 
 app.use('/posts', post_router);
 
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on PORT: ${PORT}`);
 })
